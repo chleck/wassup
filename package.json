@@ -1,0 +1,17 @@
+{
+  "author": "Dmitry Chleck <dmitrychleck@gmail.com>",
+  "name": "wassup",
+  "license": "MIT",
+  "version": "0.0.1",
+  "description": "Multi-channel logger",
+  "main": "wassup.js",
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/chleck/wassup.git"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
