@@ -1,4 +1,5 @@
-var fs = require('fs');
+var fs = require('fs')
+  , util = require('util');
 
 // TARGET
 var Target = function Target(logger, name, f) {
@@ -42,7 +43,7 @@ Logger.prototype.channel = function channel(name) {
     this[name] = function msg() {
       // console.log('!!!', self);
       var msg = [];
-      for(i in arguments) msg.push(typeof arguments[i] === 'object' ? util.inspect(arguments[i]) : arguments[i]);
+      for(var i in arguments) msg.push(typeof arguments[i] === 'object' ? util.inspect(arguments[i]) : arguments[i]);
       var data = { ts: Date.now(), ch: name, msg: msg.join('') };
       for(var target in self.channels[name]) {
         var target = self.channels[name][target];
